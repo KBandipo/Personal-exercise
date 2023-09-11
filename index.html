@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaboration exercise</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        /* font-size:10px
+        10px/16px = 0.625 =62.5% */
+        /* Percentage of user's browser font-size setting */
+        font-size: 62.5%;
+      }
+
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        color: #f7f7f7;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.568),
+            rgba(0, 0, 0, 0.568)
+          ),
+          url(./img/dog.jpg);
+        background-size: cover;
+      }
+
+      .big-container {
+        display: grid;
+        grid-template-columns: 1fr 5rem;
+        row-gap: 45rem;
+        column-gap: 3rem;
+        max-height: 100vh;
+        position: relative;
+        max-width: 120rem;
+      }
+      .container {
+        margin: 0 auto;
+        max-width: 120rem;
+      }
+      header {
+        font-size: 3rem;
+        letter-spacing: -1.5px;
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: center;
+        height: 7rem;
+      }
+      article {
+        grid-column: 1/-1;
+        max-width: 120rem;
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-92%, -50%);
+        padding: 3rem;
+      }
+      .main-content {
+        font-size: 1.8rem;
+        width: 80%;
+      }
+      .images-container {
+        display: flex;
+        gap: 0.1rem;
+        /* background-color: purple; */
+        padding: 2rem;
+        justify-self: right;
+        overflow: hidden;
+      }
+      .images-container img {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        grid-column: 1;
+        box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        transition: all 0.1s;
+        margin-right: -1.6rem;
+        border: 0.1rem solid #61524c;
+      }
+      .images-container img:hover {
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="big-container">
+      <header><h1 class="container">Welcome to De Best Dog Shop</h1></header>
+      <article>
+        <p class="main-content">
+          We understand that dogs aren't just pets; they're cherished members of
+          your family. That's why we're dedicated to helping you find the
+          perfect furry friend to add joy, love, and companionship to your life.
+          With a wide range of breeds, sizes, and temperaments, you're sure to
+          find your ideal canine companion here. Explore our gallery of adorable
+          puppies and dogs, each with their own unique personality and charm.
+          Click on any pup to learn more about their breed, temperament, and
+          availability.
+        </p>
+        <div></div>
+      </article>
+      <div class="image-image-container">
+        <div class="container images-container">
+          <img src="./img/image1.jpg" alt="dog image" />
+          <img src="./img/image2.jpg" alt="dog image" />
+          <img src="./img/image3.jpg" alt="dog image" />
+          <img src="./img/image4.jpg" alt="dog image" />
+          <img src="./img/image5.jpg" alt="dog ima+ge" />
+          <img src="./img/image6.jpg" alt="dog image" />
+          <img src="./img/image7.jpg" alt="dog image" />
+          <img src="./img/image8.jpg" alt="dog image" />
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
